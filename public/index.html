@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Realtime Chat App</title>
+</head>
+<body>
+    <div class="container">
+        <section id="serverlist"></section>
+    
+        <ul id="roomlist"></ul>
+
+        <section id="chatbox">
+            <ul id="conversation"></ul>
+            
+            <form id="form" autocomplete="off">
+                <input type="text" name="message" id="message" placeholder="Message">
+            </form>
+        </section>
+    </div>
+
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='./script.js'></script>
+    <script src='./joinNamespace.js'></script>
+    <script src='./setActive.js'></script>
+    <script src='./joinRoom.js'></script>
+</body>
+</html>

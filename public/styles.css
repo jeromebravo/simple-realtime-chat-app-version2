@@ -1,0 +1,143 @@
+:root {
+    --dark-gray: #202225;
+    --dark-gray-2: #2F3136;
+    --dark-gray-3: #34373C;
+
+    --light-gray: #36393F;
+    --light-gray-2: #8E9097;
+    --light-gray-3: #40444B;
+
+    --dirty-white: #D4D5D6;
+    --dirty-white-2: #829297;
+
+    --violet: #718DB8;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 10rem 20rem 1fr;
+}
+
+#serverlist {
+    background-color: var(--dark-gray);
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.server {
+    background-color: var(--light-gray);
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+    font-size: 1.6rem;
+    color: var(--dirty-white);
+    border-radius: 50%;
+    font-weight: 700;
+    transition: all .2s;
+}
+
+.server:hover {
+    background-color: var(--violet);
+    border-radius: 30%;
+}
+
+#roomlist {
+    background-color: var(--dark-gray-2);
+    padding: 1.5rem;
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+.description {
+    color: var(--dirty-white-2);
+    font-weight: 700;
+    margin-bottom: .7rem;
+}
+
+.room {
+    color: var(--dirty-white-2);
+    padding: .7rem 1rem;
+    transition: all .2s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.room:hover {
+    background-color: var(--dark-gray-3);
+    color: var(--dirty-white);
+}
+
+#chatbox {
+    background-color: var(--light-gray);
+    font-size: 1.6rem;
+    max-height: 100vh;
+}
+
+#conversation {
+    list-style: none;
+    color: var(--dirty-white);
+    overflow: auto;
+    padding: 2rem 3rem;
+    word-break: break-all;
+    height: 92%;
+}
+
+.chat {
+    margin-bottom: 1rem;
+}
+
+.username {
+    font-weight: 700;
+}
+
+.date {
+    font-size: 1.2rem;
+    color: var(--dirty-white-2);
+}
+
+#form {
+    height: 8%;
+}
+
+#message {
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--light-gray-3);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    color: var(--dirty-white);
+}
+
+#message:focus {
+    outline: none;
+}
+
+.server-active {
+    background-color: var(--violet);
+    border-radius: 30%;
+}
+
+.room-active {
+    background-color: var(--dark-gray-3);
+    color: var(--dirty-white);
+}

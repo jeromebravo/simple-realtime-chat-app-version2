@@ -1,6 +1,6 @@
 const username = prompt('Enter username: ');
 
-const socket = io(`http://localhost:${window.location.port}`, {
+const socket = io('/', {
     query: {
         username
     }

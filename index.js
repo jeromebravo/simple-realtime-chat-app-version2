@@ -1,11 +1,13 @@
 const express = require('express');
 const socketio = require('socket.io');
 const namespaces = require('./data/namespaces');
+const cors = require('cors');
 const app = express();
 
 app.use(express.static(__dirname + '/public'));
+app.use(cors());
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 const expressServer = app.listen(PORT, () => console.log(`Server has started on port ${PORT}`));
 
 const io = socketio(expressServer);

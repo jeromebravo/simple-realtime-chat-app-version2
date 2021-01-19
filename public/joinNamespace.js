@@ -1,5 +1,5 @@
 function joinNamespace(endpoint) {
-    nsSocket = io(`http://localhost:${window.location.port}${endpoint}`);
+    nsSocket = io('/');
 
     nsSocket.on('roomlist', nsRooms => {
         const roomlist = document.querySelector('#roomlist');
